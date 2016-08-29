@@ -21,7 +21,7 @@ def connected():
         response=urllib2.urlopen('https://www.vpnme.me/freevpn.html',timeout = 10)
         return True
     except urllib2.URLError as err: pass
-    print('Connerction failed\n')
+    print('Connection failed\n')
     return False
 
 ovpn = subprocess.Popen('sudo ./command.sh', stdout=subprocess.PIPE, shell=True, preexec_fn=os.setsid)
